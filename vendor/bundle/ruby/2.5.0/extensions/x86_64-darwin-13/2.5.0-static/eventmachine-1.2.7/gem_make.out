@@ -1,0 +1,16 @@
+current directory: /Users/Adam/code/afyaf2/aesop-digital/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/Adam/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190214-7919-5hlww3.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Adam/code/afyaf2/aesop-digital/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /Users/Adam/code/afyaf2/aesop-digital/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/Adam/code/afyaf2/aesop-digital/vendor/bundle/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 fastfilereaderext.bundle ./.gem.20190214-7919-17brkri

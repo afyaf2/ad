@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="43px" viewBox="0 0 45 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="94.9875934%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#E4AB1F" offset="0%"></stop>
+            <stop stop-color="#FFA944" offset="29.887333%"></stop>
+            <stop stop-color="#F97051" offset="73.4700217%"></stop>
+            <stop stop-color="#D76950" offset="100%"></stop>
+        </linearGradient>
+        <path d="M22.5,30.4965 L30.41325,34.659 L28.90125,25.84575 L35.30475,19.60425 L26.45775,18.3195 L22.5,10.30275 L18.54225,18.3195 L9.69525,19.60425 L16.09875,25.84575 L14.58675,34.65675 L22.5,30.4965 Z M22.5,35.5815 L8.61075,42.885 L11.2635,27.41625 L0.0225,16.46325 L15.552,14.2065 L22.5,0.135 L29.44575,14.2065 L44.97525,16.46325 L33.7365,27.41625 L36.3915,42.885 L22.5,35.5815 Z" id="path-3"></path>
+    </defs>
+    <g id="AD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing" transform="translate(-701.000000, -4031.000000)" fill-rule="nonzero">
+            <g id="Statistics-#2" transform="translate(0.000000, 3699.000000)">
+                <g id="Columns" transform="translate(160.000000, 262.000000)">
+                    <g id="Col" transform="translate(390.000000, 0.000000)">
+                        <g id="star" transform="translate(151.000000, 70.000000)">
+                            <g id="Shape">
+                                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

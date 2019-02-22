@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+// import fonts
+
+@font-face {
+  font-family: "NHG-Bold";
+  src: url(../fonts/NHaasGroteskBold.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "NHG-Regular";
+  src: url(../fonts/NHaasGroteskRegular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url(../fonts/Rubik-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Rubik-Lt";
+  src: url(../fonts/Rubik-Light.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Trueno-Reg";
+  src: url(../fonts/TruenoRg.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal
+}
+// Define defaults for each variable.
+
+$header-font: "NHG-Bold", sans-serif;
+$headerlt-font: "NHG-Regular", sans-serif;
+$base-font-size:   16px !default;
+$caption-font: "Trueno-Reg", sans-serif;
+$body-font: "Rubik-Regular", sans-serif;
+$body-light: "Rubik-Lt", sans-serif;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+
+$spacing-unit:     30px !default;
+
+$text-color:       #333333 !default;
+$gradient-fill: linear-gradient(43deg, #E4AB1F 0%, #FFA944 30%, #F97051 73%, #D76950 100%);
+$background-color: #FDFDFD !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #FAFAFA !default;
+$grey-light:       #EEF1F5;
+$grey-dark:        #818181;
+
+// Width of the content area
+$content-width:    1200px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        1000px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials.
+@import
+  "aesop/core",
+  "aesop/layout",
+  "aesop/footer",
+  "aesop/page",
+  "aesop/syntax-highlighting"
+;

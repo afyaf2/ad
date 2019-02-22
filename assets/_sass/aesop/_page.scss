@@ -1,0 +1,81 @@
+.page {
+  max-width: 100vw;
+  .navbar {
+    position: unset
+  }
+
+  .page-header {
+    margin-top: -50px;
+    text-align: center;
+    h1 {
+      font-family: $header-font;
+      font-size: 52px;
+      line-height: 1.1;
+      letter-spacing: -0.6px
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 1.3
+    }
+  }
+}
+
+.team-slider {
+  padding-top: 2.5rem;
+  padding-bottom: 10rem;
+  .slider-wrapper {
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin: 0 30px;
+    .team-member {
+      width: 25%;
+      text-align: center;
+      opacity: 0.6;
+      transform: scale(0.6) translateY(-150px);
+      transition: 0.3s transform ease;
+      &.active {
+        transform: scale(1.3);
+        opacity: 1;
+        .member-bio p {
+          opacity: 1;
+        }
+        #background-circle {
+          opacity: 1;
+        }
+      }
+
+      .member-name {
+        padding-top: 0.5rem;
+        h4 {
+          font-weight: 1000;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem
+        }
+
+        h5.light {
+          font-family: $headerlt-font;
+          font-size: 16px;
+          color: #aba8a8b5;
+          margin-bottom: 15px
+        }
+      }
+      .avatar-image svg{
+        height: 200px;
+        width: 250px
+      }
+      .member-bio {
+        p {
+          font-size: 0.9rem;
+          transition: 0.3s opacity linear;
+          opacity: 0;
+          line-height: 1.4;
+          font-family: $body-light
+        }
+      }
+      #background-circle {
+        transition: 0.3s opacity linear;
+        opacity: 0;
+      }
+    }
+  }
+}
