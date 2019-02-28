@@ -60,10 +60,10 @@ $grey-light:       #EEF1F5;
 $grey-dark:        #818181;
 
 // Width of the content area
-$content-width:    1200px !default;
+$content-width:    1400px !default;
 
+$on-laptop:        1200px !default;
 $on-palm:          600px !default;
-$on-laptop:        1000px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -84,5 +84,6 @@ $on-laptop:        1000px !default;
   "aesop/layout",
   "aesop/footer",
   "aesop/page",
+  "aesop/storysection",
   "aesop/syntax-highlighting"
 ;

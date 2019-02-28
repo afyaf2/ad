@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="663px" height="808px" viewBox="0 0 663 808" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>drawkit-notebook-man-monochrome</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="drawkit-notebook-man-monochrome">
+            <g id="Vector">
+                <rect id="Rectangle" fill="#D0D0D0" transform="translate(344.246575, 419.727383) rotate(-10.490000) translate(-344.246575, -419.727383) " x="110.546575" y="68.9373831" width="467.4" height="701.58" rx="64.48"></rect>
+                <rect id="Rectangle" fill="#D0D0D0" transform="translate(278.582951, 431.879376) rotate(-10.490000) translate(-278.582951, -431.879376) " x="111.667951" y="81.0893762" width="333.83" height="701.58"></rect>
+                <rect id="Rectangle" fill="#DEDEDE" transform="translate(267.445232, 421.035977) rotate(-14.680000) translate(-267.445232, -421.035977) " x="83.5702319" y="70.2459773" width="367.75" height="701.58"></rect>
+                <path d="M581.82,314.67 C575.17,312.43 570.16,308.3 570.16,300.8 C570.16,297.59 571.98,293.22 574.91,288.29 L515.12,60.13 C506.079859,25.6979953 470.846433,5.10674103 436.41,14.13 L63.07,111.93 C28.6330291,120.969997 8.04036656,156.21031 17.07,190.65 L162.22,744.58 C171.255382,779.015617 206.492756,799.609178 240.93,790.58 L614.27,692.75 C648.705617,683.714618 669.299178,648.477244 660.27,614.04 L581.82,314.67 Z" id="Path" fill="#DEDEDE"></path>
+                <rect id="Rectangle" fill="#F3F3F3" transform="translate(480.200400, 368.782000) rotate(-14.452428) translate(-480.200400, -368.782000) " x="455.658785" y="17.396163" width="49.0832293" height="702.771674"></rect>
+                <rect id="Rectangle" fill="#F3F3F3" transform="translate(299.355301, 237.156933) rotate(-14.680000) translate(-299.355301, -237.156933) " x="91.3503006" y="144.656933" width="416.01" height="185"></rect>
+                <rect id="Rectangle" fill="#F3F3F3" transform="translate(299.355301, 237.156933) rotate(-14.680000) translate(-299.355301, -237.156933) " x="91.3503006" y="144.656933" width="416.01" height="185"></rect>
+                <rect id="Rectangle" fill="#F3F3F3" transform="translate(268.990705, 695.129426) rotate(-14.680000) translate(-268.990705, -695.129426) " x="189.260705" y="646.304426" width="159.46" height="97.65"></rect>
+                <g id="pencil" transform="translate(516.821084, 0.000000)">
+                    <path d="M1.43913979,708 L0.839139792,712.27 C0.147951393,717.14693 1.27251891,722.107839 3.99913979,726.21 L1.43913979,708 Z" id="Path" fill="#DFDFDF"></path>
+                    <path d="M122.230309,66.23 L112.390309,64.83 L92.3903094,62 L89.5603094,82 L6.7303094,667.42 C16.1869669,662.027511 20.9069669,665.130844 20.8903094,676.73 C20.8736519,688.329156 16.1236519,706.115823 6.6403094,730.09 C9.64678647,732.888653 13.4420496,734.69376 17.5103094,735.26 L27.3603094,736.66 C38.3946642,738.216302 48.601851,730.53405 50.1603094,719.5 L55.3803094,682.63 L139.380309,89.03 L142.210309,69.03 L122.230309,66.23 Z" id="Path" fill="#EEF1F5"></path>
+                    <polygon id="Path" fill="#F3F3F3" points="126.840309 0 92.6403094 62.19 142.440309 69.24"></polygon>
+                    <polygon id="Path" fill="url(#b)" points="126.910309 -2.84217094e-14 115.640309 20.49 132.050309 22.82"></polygon>
+                    <polygon id="Path" fill="url(#b)" points="10.6403094 670 20.5103094 676.49 17.1303094 689.15 53.3203094 694.28 55.8503094 676.4"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
