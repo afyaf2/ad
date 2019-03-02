@@ -71,41 +71,41 @@ var handleMediaChange = function(mql) {
 
         firstScroll.set('.story-title', { y: 400 })
             .set('.image-1', {y: 200, scale: 1.3})
-            .to('.story-title', '1', {
+            .to('.story-title', '3', {
                 y: -50,
                 scaleY: 0.7,
                 scaleX: 0.7
             })
-            .to('.image-1', '1', {
+            .to('.image-1', '3', {
                 y: -50,
                 x: -50,
                 scale: 0.7
             })
-            .to('.image1-caption', '1', {
+            .to('.image1-caption', '3', {
                 opacity: 1,
                 x: 125,
                 scale: 0.8
             })
-            .to('.image-1', '1', { opacity: 1 })
+            .to('.image-1', '3', { opacity: 1 })
             .set('.bg-elem', { x: 500 })
-            .to('.image1-caption', '1', {
+            .to('.image1-caption', '3', {
                 y: -210
             })
-            .to('.bg-elem', '1', {
+            .to('.bg-elem', '3', {
                 x: 10,
                 scaleY: 0.60,
                 opacity: 0.2
             }, '-=0.5')
             .set('.text-section', { scale: 1.2, xPercent: 80 })
-            .to('.text-section', '1', {
+            .to('.text-section', '3', {
                 scale: 0.8,
                 y: -50,
                 opacity: 1
             })
-            .to('.text-section', '1', {
+            .to('.text-section', '3', {
                 y: -180
             })
-            .to('.image-1 img', '1', {
+            .to('.image-1 img', '3', {
               opacity: 0.9
             })
             .to('.uline', '2', {
@@ -195,20 +195,20 @@ var handleMediaChange = function(mql) {
              triggerElement: '.trigger-1',
              triggerHook: 0.4,
              duration: '50%'
-         }).setTween(firstScroll).addIndicators().addTo(controller);
+         }).setTween(firstScroll).addTo(controller);
 
          // Second Scroll Scene
          var scene2 = new ScrollMagic.Scene({
              triggerElement: '.trigger-2',
              triggerHook: 0.2,
              duration: '40%'
-         }).setTween(secondScroll).addIndicators().addTo(controller);
+         }).setTween(secondScroll).addTo(controller);
 
           var scene3 = new ScrollMagic.Scene({
               triggerElement: '.trigger-3',
               triggerHook: 0.2,
               duration: '35%'
-          }).setTween(thirdScroll).addIndicators().addTo(controller);
+          }).setTween(thirdScroll).addTo(controller);
 
 
     } else {
@@ -391,13 +391,13 @@ var handleMediaChange = function(mql) {
             triggerElement: '.trigger-2',
             triggerHook: 0,
             duration: '70%'
-        }).setTween(secondScroll).addIndicators().addTo(controller);
+        }).setTween(secondScroll).addTo(controller);
 
         var scene3 = new ScrollMagic.Scene({
             triggerElement: '.trigger-3',
             triggerHook: 0.2,
             duration: '100%'
-        }).setTween(thirdScroll).addIndicators().addTo(controller);
+        }).setTween(thirdScroll).addTo(controller);
 
     }
 }
@@ -436,21 +436,7 @@ if (header) {
 /* initialize AnimateOnScroll */
 
 AOS.init();
-
-/* set rellax parallax scroll on services cards */
-
-// var rellaxElement = document.querySelector('.rellax');
-//
-// if (rellaxElement) {
-//   var rellax = new Rellax('.rellaxElement', {
-//     speed: 1,
-//     center: true,
-//     wrapper: null,
-//     vertical: true,
-//     horizontal: false
-//   });
-// }
-
+3
 /* team-members pop-in handler */
 
 var teamMembers = Array.from(document.querySelectorAll('.team-member'));
