@@ -3,7 +3,7 @@ module.exports = {
 
   tasks: {
     browsersync: true,
-    eslint:      true,
+    eslint:      false,
     imagemin:    true,
     sass:        true,
     watch:       true,
@@ -57,7 +57,7 @@ module.exports = {
     src:   '_js',
     dest:  'js',
     entry: [
-      'bundle.js','rellax.min.js', 'scripts.js'
+      'scripts.js'
     ],
   },
 

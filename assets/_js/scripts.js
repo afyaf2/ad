@@ -70,7 +70,7 @@ var handleMediaChange = function(mql) {
         var firstScroll = new TimelineMax;
 
         firstScroll.set('.story-title', { y: 400 })
-            .set('.image-1', {y: 200, scale: 1.3})
+            .set('.image-1', { y: 200, scale: 1.3 })
             .to('.story-title', '3', {
                 y: -50,
                 scaleY: 0.7,
@@ -106,109 +106,109 @@ var handleMediaChange = function(mql) {
                 y: -180
             })
             .to('.image-1 img', '3', {
-              opacity: 0.9
+                opacity: 0.9
             })
             .to('.uline', '2', {
                 opacity: 1
             }, "-= 1");
 
-         var secondScroll = new TimelineMax;
+        var secondScroll = new TimelineMax;
 
-         secondScroll
-             .to('.image-1', '0.5', { opacity: 0 }, "+= 1")
-             .fromTo('.image-2', '3', {
-                 transformOrigin: 'center top',
-                 opacity: 0.1,
-                 scale: 0.9,
-                 y: -10
-             }, {
-                 opacity: 1,
-                 scale: 0.75,
-                 x: 40
-             }, '-= 1')
-             .set('.text-section2', { scale: 1.2, x: -100, y: 60 })
-             .to('.text-section2', '3', {
-                 y: -200,
-                 scale: 0.8,
-                 opacity: 1
-             })
-             .to('.uline2', '3', { opacity: 1 });
+        secondScroll
+            .to('.image-1', '0.5', { opacity: 0 }, "+= 1")
+            .fromTo('.image-2', '3', {
+                transformOrigin: 'center top',
+                opacity: 0.1,
+                scale: 0.9,
+                y: -10
+            }, {
+                opacity: 1,
+                scale: 0.75,
+                x: 40
+            }, '-= 1')
+            .set('.text-section2', { scale: 1.2, x: -100, y: 60 })
+            .to('.text-section2', '3', {
+                y: -200,
+                scale: 0.8,
+                opacity: 1
+            })
+            .to('.uline2', '3', { opacity: 1 });
 
-          var thirdScroll = new TimelineMax;
+        var thirdScroll = new TimelineMax;
 
-          thirdScroll
-              .set('.content-title', { scale: 1.2, x: -60 })
-              .set('.phone-body', { scale: 0.8, yPercent: 10 })
-              .to('.content-title', '1', {
-                  y: -125,
-                  opacity: 1,
-                  scale: 0.7,
-                  transformOrigin: "center bottom"
-              })
-              .to('.phone-body', '1', {
-                  y: -175,
-                  scale: 0.9
-              })
-              .to('.phone-body', '1', {
-                  y: -350,
-                  x: -80,
-                  scale: 0.45
-              })
-              .to('.phone-body', '2', {
-                  opacity: 0.8
-              }, "-=2")
-              .set(['.text-section3', '.text-section4'], { yPercent: 300 })
-              .set('.text-section3', { xPercent: 60 })
-              .set('.text-section4', { xPercent: 77.3 })
-              .fromTo('.text-section3 p', '3', {
-                  opacity: 0,
-                  scale: 1.4,
-              }, {
-                  opacity: 1,
-                  scale: 0.7,
-                  x: 15,
-                  y: -280
-              })
-              .to('.text-section3 span', '2', {
-                  opacity: 1
-              },"-=.5")
-              .fromTo('.text-section4 p', '2', {
-                  opacity: 0,
-                  scale: 1.4
-              }, {
-                  y: -80,
-                  opacity: 1,
-                  scale: 0.7
-              })
-              .to('.text-section4 p', '2', {
+        thirdScroll
+            .set('.content-title', { scale: 1.2, x: -60 })
+            .set('.phone-body', { scale: 0.8, yPercent: 10 })
+            .to('.content-title', '1', {
+                y: -125,
+                opacity: 1,
+                scale: 0.7,
+                transformOrigin: "center bottom"
+            })
+            .to('.phone-body', '1', {
+                y: -175,
+                scale: 0.9
+            })
+            .to('.phone-body', '1', {
+                y: -350,
+                x: -80,
+                scale: 0.45
+            })
+            .to('.phone-body', '2', {
+                opacity: 0.8
+            }, "-=2")
+            .set(['.text-section3', '.text-section4'], { yPercent: 300 })
+            .set('.text-section3', { xPercent: 60 })
+            .set('.text-section4', { xPercent: 77.3 })
+            .fromTo('.text-section3 p', '3', {
+                opacity: 0,
+                scale: 1.4,
+            }, {
+                opacity: 1,
+                scale: 0.7,
+                x: 15,
+                y: -280
+            })
+            .to('.text-section3 span', '2', {
+                opacity: 1
+            }, "-=.5")
+            .fromTo('.text-section4 p', '2', {
+                opacity: 0,
+                scale: 1.4
+            }, {
+                y: -80,
+                opacity: 1,
+                scale: 0.7
+            })
+            .to('.text-section4 p', '2', {
                 y: -125
-              })
-              .to('.text-section4 span', '2', {
-                  opacity: 1
-              },"-=1.5")
+            })
+            .to('.text-section4 span', '2', {
+                opacity: 1
+            }, "-=1.5")
 
-         var controller = new ScrollMagic.Controller();
-//
-//         // First Scroll Scene
-//
-         var scene1 = new ScrollMagic.Scene({
-             triggerElement: '.trigger-1',
-             triggerHook: 0.4,
-             duration: '50%'
-         }).setTween(firstScroll).addTo(controller);
+        var controller = new ScrollMagic.Controller();
+        //
+        //         // First Scroll Scene
+        //
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: '.trigger-1',
+            triggerHook: 0.4,
+            duration: '50%'
+        }).setTween(firstScroll).addTo(controller);
 
-         // Second Scroll Scene
-         var scene2 = new ScrollMagic.Scene({
-             triggerElement: '.trigger-2',
-             triggerHook: 0.2,
-             duration: '40%'
-         }).setTween(secondScroll).addTo(controller);
+        // Second Scroll Scene
+        var scene2 = new ScrollMagic.Scene({
+            triggerElement: '.trigger-2',
+            triggerHook: 0.2,
+            duration: '40%'
+        }).setTween(secondScroll).addTo(controller);
 
-          var scene3 = new ScrollMagic.Scene({
-              triggerElement: '.trigger-3',
-              triggerHook: 0.2,
-              duration: '35%'
-          }).setTween(thirdScroll).addTo(controller);
+        var scene3 = new ScrollMagic.Scene({
+            triggerElement: '.trigger-3',
+            triggerHook: 0.2,
+            duration: '35%'
+        }).setTween(thirdScroll).addTo(controller);
 
 
     } else {
