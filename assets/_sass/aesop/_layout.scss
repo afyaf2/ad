@@ -38,6 +38,16 @@
       }
     }
   }
+  @include media-query($on-palm) {
+    margin: 25px;
+    height: unset;
+    .title-icon {
+      svg {
+        height: 50px;
+        width: 90px;
+      }
+    }
+  }
 }
 
 .home {
@@ -47,7 +57,7 @@
 .hero-banner {
   padding: 0 75px;
   margin: 0 auto;
-  min-height: 97.5vh;
+  min-height: 700px;
   position: relative;
 
   .banner-text {
@@ -90,6 +100,26 @@
       margin: auto;
     }
   }
+  @include media-query($on-palm) {
+    min-height: 650px;
+    padding: 0 25px;
+    .lead-text {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+    .lead-text.tab-1, .lead-text.tab-2 {
+      padding-left: 0 !important
+    }
+    .lead-text.tab-2 {
+      width: 85%;
+    }
+    h1 {
+      font-size: 16px;
+      width: 70%;
+      line-height: 1.8;
+      padding-left: 0;
+    }
+  }
 }
 
 .cta {
@@ -101,7 +131,11 @@
 
   .cta-title {
     font-size: 38px;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    @include media-query($on-palm) {
+      font-size: 32px;
+      margin-bottom: 2rem
+    }
   }
 
   &.divider {
@@ -126,6 +160,11 @@
         opacity: 0.8;
       }
     }
+    @include media-query($on-palm) {
+      .cta-title h4 {
+        width: 58%;
+      }
+    }
   }
 
   h2, h4 {
@@ -133,15 +172,31 @@
     z-index: 99;
     color: white;
     width: 50%;
-    text-align: center
+    text-align: center;
+    @include media-query($on-palm) {
+      width: 90%;
+    }
   }
   h4 {
-    line-height: 1.5
+    line-height: 1.5;
+    @include media-query($on-palm) {
+      font-size: 14px;
+      width: 67%;
+      line-height: 1.8
+    }
   }
 }
 
 .services {
   .cta {
+
+    .cta-title {
+      margin-top: 75px;
+      @include media-query($on-palm) {
+        margin-top: 50px
+      }
+    }
+
     & * {
     color: $text-color;
     }
@@ -151,15 +206,21 @@
   }
 
   .services-cards {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0 2.5rem;
+    @include media-query($on-palm) {
+      display: block;
+      padding: 0;
+    }
   }
 
   .card-wrapper {
     position: relative;
-    padding: 50px;
+    padding: 50px 0;
     min-height: 675px;
     width: 40%;
     &::before {
@@ -168,6 +229,11 @@
       position: absolute;
       z-index: -1;
       opacity: 0.8;
+    }
+    @include media-query($on-palm) {
+      width: unset;
+      padding: 0 12.5px 0 12.5px;
+      margin: 0
     }
   }
 
@@ -192,12 +258,21 @@
       opacity: 0.9;
       left: 50%;
       transform: translateX(-50%);
-      box-shadow: 0 6px 8px rgba(102,119,136,.03),
-        0 1px 2px rgba(102,119,136,.3);
     }
 
     .card-image {
       width: 80%;
+      img {
+        border-radius: 15px;
+      }
+    }
+
+    .card-logo.small {
+      padding-bottom: 1.5rem;
+      svg {
+        width: 225px;
+        height: 200px;
+      }
     }
 
     &.lt {
@@ -214,7 +289,7 @@
 
     p {
       line-height: 1.75;
-      width: 75%;
+      width: 77%;
       padding: 0 35px;
       font-family: $body-font;
       font-size: 14px;
@@ -229,6 +304,16 @@
 
     &.left {
       float: left;
+    }
+    @include media-query($on-palm) {
+      width: unset;
+      padding: 2.25rem;
+      h3 {
+        text-align: center
+      }
+      p {
+        font-size: 12px
+      }
     }
   }
 }
@@ -253,15 +338,44 @@
   }
 }
 
+#block-left-2 {
+  margin-top: -175px;
+  margin-right: auto;
+  margin-left: 8.5rem;
+  .card::before {
+    content: '4';
+  }
+}
+
+@include media-query ($on-palm) {
+  #block-left-1, #block-left-2, #block-right-1, #block-right-2, #block-intro {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: unset;
+    min-height: unset;
+    .card {
+      margin-bottom: 7.5rem
+    }
+    .card.right {
+      float: unset;
+    }
+  }
+}
+
 .roi-numbers {
   background-color: $grey-light;
   padding-bottom: 35px;
-
+  @include media-query($on-palm) {
+    padding-bottom: 80px
+  }
   .cta {
     min-height: unset;
   }
   .cta * {
     color: $text-color;
+    @include media-query($on-palm) {
+    width: unset;
+    }
   }
 
   .cta-title {
@@ -327,6 +441,28 @@
           line-height: 1.75
         }
       }
+      /* card-container media queries */
+
+      @include media-query($on-palm) {
+        padding: 50px 25px;
+        justify-content: unset;
+        overflow-x: scroll;
+        margin-bottom: -25px;
+        padding-bottom: 25px;
+        .stat-card {
+          flex-shrink: 0;
+          min-width: 250px;
+          height: 350px;
+          width:unset;
+          &:not(:last-child) {
+            margin-right: 25px
+          }
+        }
+        &::-webkit-scrollbar{
+          display: none !important;
+        }
+      }
+
     }
   }
 }
@@ -383,9 +519,60 @@
       opacity: 0.5;
     }
   }
+  /* testimonial section media query */
+  @include media-query($on-palm) {
+    .testimonial-item {
+      width: unset;
+      padding: 45px 25px;
+      .quote {
+        font-size: 18px;
+        padding: 0 20px;
+        margin: 30px 0;
+      }
+    }
+    .testimonial-author h5 {
+      margin-bottom: 0
+    }
+  }
 }
 
 .contact {
+
+  /* contact media query - first to aid readabity */
+
+  @include media-query($on-palm) {
+    flex-wrap: wrap;
+    padding: unset;
+    .contact-col, .info-col {
+      width: unset !important;
+    }
+    form {
+      padding: 25px 0;
+      margin: 0 auto;
+      width: 300px;
+      border-bottom: 1px solid $grey-light
+    }
+    .form-row {
+      width: 100% !important;
+    }
+    .info-col {
+      padding: 35px 25px;
+    }
+    .form-field:focus-within label {
+      transform: translate(-340%, -210%) !important;
+    }
+    #subject-row.form-field:focus-within label {
+      transform: translate(-280%, -210%) !important;
+    }
+    #textarea-row.form-field:focus-within label {
+      transform: translate(-230%, -390%) !important;
+    }
+    .contact-item:last-child h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  /* contact desktop settings */
   display: flex;
   padding: 0px 10% 75px;
   flex-wrap: nowrap;

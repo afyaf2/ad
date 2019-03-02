@@ -10,22 +10,25 @@ layout: default
 
   {% include divider.html %}
 
+  {% include story-section.html %}
+
   <div class="services wrapper">
 
     <div class="cta">
       <h2 class="cta-title">What we do.</h2>
       <h4 class="tagline">
-          Specializing in the behavior of hungry people and foodies alike,</br>we optimize your accounts on the most popular platforms they trust:</br> Yelp, Google+, TripAdvisor, Zomato, Facebook and Instagram,</br>becoming an online voice of your brand.
+          Specializing in the behavior of hungry people and foodies alike,</br>we optimize your accounts on the most popular platforms they trust;</br>becoming an online voice of your brand.
       </h4>
     </div>
 
-    <div class="services-cards rellax"> <!-- init rellax parallax effect -->
 
-    <div class="card-wrapper rellax" data-rellax-speed="-2" >
+    <div class="services-cards"> <!-- init parallax effect -->
+
+    <div class="card-wrapper" id="block-intro">
       <div class="card intro left lt">
         <h3 class="card-title">Here's Our Menu</h3>
-        <div class="card-image rellax" data-rellax-speed="0.5">
-          <img src="/assets/images/food.png" alt="restaurant marketing">
+        <div class="card-image" 5">
+          <img src="/assets/images/landingpage2.png" alt="restaurant marketing">
         </div>
         <div class="card-text">
           <p>
@@ -38,7 +41,7 @@ layout: default
       </div>
     </div>
 
-    <div class="card-wrapper rellax" id="block-right-1">
+    <div class="card-wrapper" id="block-right-1">
       <div class="card service-1 right">
         <h3 class="card-title">Social Media Management</h3>
         <div class="card-text">
@@ -62,7 +65,7 @@ layout: default
       </div>
     </div>
 
-    <div class="card-wrapper rellax"id="block-left-1">
+    <div class="card-wrapper" id="block-left-1">
       <div class="card service-2 left">
         <h3 class="card-title">Review Site Management</h3>
           <p>Because in the digital age, ratings and reviews are just as powerful as word of mouth.</p>
@@ -72,15 +75,28 @@ layout: default
       </div>
     </div>
 
-    <div class="card-wrapper rellax" data-rellax-speed="-1" id="block-right-2">
+    <div class="card-wrapper" id="block-right-2">
       <div class="card lt service-3 right">
         <h3 class="card-title">Content Creation</h3>
-        <div class="card-logo rellax" data-rellax-speed="1">
+        <div class="card-logo" >
           {% include icons/holding-phone.svg %}
         </div>
         <div class="card-text">
           <p>Content Creation is similar to running a kitchen, efficiency and coordination is key.</p>
           <p>Generating original content your ideal customers crave without disrupting business and maximizing their use is what we strive for.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-wrapper" id="block-left-2">
+      <div class="card service-4 left">
+        <h3 class="card-title">Web Design & Development</h3>
+        <div class="card-logo small">
+          {% include icons/design-notebook.svg %}
+        </div>
+        <div class="card-text">
+          <p>A high quality menu needs a high quality website.</p>
+          <p>We will help you design and develop a site that can handle anything from reservations to ecommerce.</p>
+          <p>We make websites that drive customers to your restaurant.</p>
         </div>
       </div>
     </div>
@@ -102,8 +118,8 @@ layout: default
         <div class="stat-card"
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
-            data-aos-delay="650"
-            data-aos-duration="650"
+            data-aos-delay="250"
+            data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
             {% include icons/search.svg %}
@@ -116,8 +132,8 @@ layout: default
         <div class="stat-card"
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
-            data-aos-delay="300"
-            data-aos-duration="650"
+            data-aos-delay="100"
+            data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
             {% include icons/star.svg %}
@@ -130,8 +146,8 @@ layout: default
         <div class="stat-card"
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
-            data-aos-delay="650"
-            data-aos-duration="650"
+            data-aos-delay="250"
+            data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
             {% include icons/eye.svg %}
