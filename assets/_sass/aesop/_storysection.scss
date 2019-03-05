@@ -38,6 +38,7 @@
       opacity: 0;
       p {
         font-size: 32px;
+        line-height: 0.9;
         .uline, .uline2 {
           opacity: 0;
           border-bottom: 1px solid white
@@ -123,6 +124,7 @@
       position: absolute;
       top: 0;
       p {
+        line-height: 0.6;
         opacity: 0;
         font-size:28px;
         @include media-query($on-palm) {
@@ -135,7 +137,34 @@
           border-bottom: 1px solid white
         }
       }
-
     }
+  }
+}
+
+#story-btn {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: $caption-font;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px;
+  position: absolute;
+  bottom: -50%;
+  right: -25%;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  opacity: 0;
+  &:hover {
+    background: #D96E56;
+    border: 2px solid black;
+  }
+  @include media-query($on-palm) {
+    padding: 7.5px;
+    font-size: 8px;
+    top: -80%;
+    right: 40%;
+    bottom: unset;
   }
 }

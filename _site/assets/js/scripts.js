@@ -31,29 +31,27 @@ var handleMediaChange = function(mql) {
 
         /* define hero text animation timeline */
 
-        var heroTimeline = new TimelineMax({ paused: true });
-
-        heroTimeline.to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
-            .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
-            .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
-                scaleX: 1.05,
-                scaleY: 1.05,
-                ease: Back.easeOut.config(1.5),
-                opacity: 0.6
-            }, '0.4')
-            .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
-            .call(smoothScroll);
+//         var heroTimeline = new TimelineMax({ paused: true });
+//
+//         heroTimeline.to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
+//             .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
+//             .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
+//                 scaleX: 1.05,
+//                 scaleY: 1.05,
+//                 ease: Back.easeOut.config(1.5),
+//                 opacity: 0.6
+//             }, '0.4')
+//             .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
+//             .call(smoothScroll);
         /* hero element animation and smooth-scroll handler */
 
-        document.getElementById("scroll-btn").addEventListener('click', function() {
-            heroTimeline.play();
+        document.getElementById("story-btn").addEventListener('click', function() {
+          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeInOut });;
         });
 
-        function smoothScroll() {
-            TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
-            // call reset function on timeline
-            Reset();
-        }
+        document.getElementById("scroll-btn").addEventListener('click', function() {
+          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
+        });
 
         /* debounce/reset function for timeline */
 
@@ -142,7 +140,7 @@ var handleMediaChange = function(mql) {
               .to('.content-title', '1', {
                   y: -125,
                   opacity: 1,
-                  scale: 0.7,
+                  scale: 0.65,
                   transformOrigin: "center bottom"
               })
               .to('.phone-body', '1', {
@@ -186,6 +184,9 @@ var handleMediaChange = function(mql) {
               .to('.text-section4 span', '2', {
                   opacity: 1
               },"-=1.5")
+              .to('#story-btn', '2', {
+                opacity: 1,
+              });
 
          var controller = new ScrollMagic.Controller();
 //
@@ -219,16 +220,13 @@ var handleMediaChange = function(mql) {
         /*
          */
 
-        console.log('desktop')
-        document.getElementById("scroll-btn").addEventListener('click', function() {
-            heroTimeline.play();
+        document.getElementById("story-btn").addEventListener('click', function() {
+          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeIn });;
         });
 
-        function smoothScroll() {
-            TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
-            // call reset function on timeline
-            Reset();
-        }
+        document.getElementById("scroll-btn").addEventListener('click', function() {
+          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
+        });
 
         // debounce/reset function for timeline
 
@@ -241,28 +239,28 @@ var handleMediaChange = function(mql) {
         /* define hero text animation timeline */
         var heroTimeline = new TimelineMax({ paused: true });
 
-        heroTimeline.to('#hero-text-1', '0.5', {
-                x: 160,
-                ease: Power2.easeInOut
-            })
-            .to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
-            .to('#hero-text-2', '0.5', {
-                x: 120,
-                ease: Power2.easeInOut
-            })
-            .to('#hero-text-3', '0.5', {
-                x: 80,
-                ease: Power2.easeInOut
-            })
-            .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
-            .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
-                scaleX: 1.2,
-                scaleY: 1.2,
-                ease: Back.easeOut.config(1.5),
-                opacity: 0.6
-            }, '0.4')
-            .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
-            .call(smoothScroll);
+        // heroTimeline.to('#hero-text-1', '0.5', {
+        //         x: 160,
+        //         ease: Power2.easeInOut
+        //     })
+        //     .to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
+        //     .to('#hero-text-2', '0.5', {
+        //         x: 120,
+        //         ease: Power2.easeInOut
+        //     })
+        //     .to('#hero-text-3', '0.5', {
+        //         x: 80,
+        //         ease: Power2.easeInOut
+        //     })
+        //     .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
+        //     .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
+        //         scaleX: 1.2,
+        //         scaleY: 1.2,
+        //         ease: Back.easeOut.config(1.5),
+        //         opacity: 0.6
+        //     }, '0.4')
+        //     .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
+        //     .call(smoothScroll);
 
         /* scrolled tween section */
 
@@ -375,6 +373,9 @@ var handleMediaChange = function(mql) {
             .to('.text-section4 span', '2', {
                 opacity: 1
             })
+            .to('#story-btn', '2', {
+                opacity: 1,
+            },"+=3")
 
         var controller = new ScrollMagic.Controller();
 

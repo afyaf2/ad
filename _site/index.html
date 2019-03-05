@@ -19,7 +19,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/plugins/CSSRulePlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>
-  <script src="/assets/js/rellax.min.js" type="text/javascript"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
@@ -122,6 +121,7 @@
             <p>at Aesop Digital we produce</p>
             <p>visually-stunning work that</p>
             <p><span class="uline5">your customers will notice.</span></p>
+            <a href="javascript:void(0)" id="story-btn">work with us</a>
           </figcaption>
         </figure>
       </div>
@@ -133,34 +133,22 @@
   <div class="services wrapper">
 
     <div class="cta">
-      <h2 class="cta-title">What we do.</h2>
+      <h2 class="cta-title">Here's our menu.</h2>
       <h4 class="tagline">
-          Specializing in the behavior of hungry people and foodies alike,</br>we optimize your accounts on the most popular platforms they trust;</br>becoming an online voice of your brand.
+          Our approach to digital marketing is similar to plating a dish: every element is meticulously placed to deliver the best possible experience.
       </h4>
     </div>
 
 
     <div class="services-cards"> <!-- init parallax effect -->
 
-    <div class="card-wrapper" id="block-intro">
-      <div class="card intro left lt">
-        <h3 class="card-title">Here's Our Menu</h3>
-        <div class="card-image" 5">
-          <img src="/assets/images/landingpage2.png" alt="restaurant marketing">
-        </div>
-        <div class="card-text">
-          <p>
-            Our approach to digital marketing is similar to plating a dish: every element is meticulously placed to deliver the best possible experience.
-          </p>
-          <p>
-            Our goal is to have people eat with their eyes and communicate a positive restaurant experience before even stepping foot inside.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-wrapper" id="block-right-1">
-      <div class="card service-1 right">
+    <div class="card-wrapper" id="block-left-1">
+      <div class="card service-1 left"
+      data-aos="fade-up"
+      data-aos-anchor="#block-left-1"
+      data-aos-delay="100"
+      data-aos-duration="350"
+      data-aos-easing="ease-in">
         <h3 class="card-title">Social Media Management</h3>
         <div class="card-text">
           <p>
@@ -183,8 +171,13 @@
       </div>
     </div>
 
-    <div class="card-wrapper" id="block-left-1">
-      <div class="card service-2 left">
+    <div class="card-wrapper" id="block-right-1">
+      <div class="card service-2 right"
+      data-aos="fade-up"
+      data-aos-anchor="#block-right-1"
+      data-aos-offset="350"
+      data-aos-duration="350"
+      data-aos-easing="ease-in">
         <h3 class="card-title">Review Site Management</h3>
           <p>Because in the digital age, ratings and reviews are just as powerful as word of mouth.</p>
           <p>We create, optimize and manage your accounts on: Google+, Yelp, TripAdvisor, and Zomato…</p>
@@ -193,11 +186,17 @@
       </div>
     </div>
 
-    <div class="card-wrapper" id="block-right-2">
-      <div class="card lt service-3 right">
+    <div class="card-wrapper" id="block-left-2">
+      <div class="card service-3 left"
+      data-aos="fade-up"
+      data-aos-anchor="#block-left-2"
+      data-aos-offset="200"
+      data-aos-duration="350"
+      data-aos-easing="ease-in">
         <h3 class="card-title">Content Creation</h3>
         <div class="card-logo" >
           <svg width="275" height="254" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient x1="94.988%" y1="100%" x2="0%" y2="0%" id="b"><stop stop-color="#E4AB1F" offset="0%"/><stop stop-color="#FFA944" offset="29.887%"/><stop stop-color="#F97051" offset="73.47%"/><stop stop-color="#D76950" offset="100%"/></linearGradient><pattern id="c" width="50" height="50" x="67.328" y="115.086" patternUnits="userSpaceOnUse"><use xlink:href="#a"/></pattern><image id="a" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGOfPtRkwAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAzNJREFUeAHt3M2OozAMwHG61z3P+/W+LzXvN+c5zzhIRbCBJI6wncI/EuoXBce/GI3GbR8/0/RvmqbPxzR9y23XkGP8lTc+ZfuQ7Us2jidJaB3r/D3SAzBaUzdN6+TJu05ffGLRP6yDk8juWGl9IGDYLJauCgHDBiOVhhoEDDsMNQgYthgqEDDsMZpBwPDBaAIBww+jCgKGL0YRBAx/jEMQMGIwdkHAiMPIQMCIxdiAgBGPsYCAMQbGDALGOBgJ5I9sT9no9EkStMNiMScQMLQSsr8Fhhz2mUBOb0PKMe/Y6TvlMwn01GX1aIZVZUgM85VK3aBaB28dnJzrjpW2TnH7fTBsFktXhYBhg5HKQQ0Chh2GGgQMWwwVCBj2GM0gYPhgNIGA4YdRBQHDF6MIAoY/xiEIGDEYuyBgxGFkIGDEYmxAwIjHWEDAGANjBgFjHIwEQk99sG8f01NPy7JjWF1Z6KkPhCGhfNBTV4JYVUbCkO1L3aBax28dnJyLnvo64aX7YNgslq4KAcMGIxWAGgQMOww1CBi2GCoQMOwxmkHA8MFoAgHDD6MKAoYvRhEEDH+MQxAwYjB2QcCIw8hAwIjF2ICAEY+xgIAxBsYMAsY4GAmEnjo99bQO6uOulUtPvb42sj0sFws99Szd5ScsMeTM9NTL6d++ao0hZ0ufIegbTsGd8nMVMsO3+fmQLhAw7P5UVoOAYYeRrlUqEDBsMVQgYNhjNIOA4YPRBAKGH0YVBAxfjCIIGP4YhyBgxGDsgoARh5GBgBGLsQEBIx5jAQFjDIwZBIxxMBIIPXV66mkd1MddK5eeen1tZHtYLhZ66lm6y09YYsiZ6amX07991RpDzkZPfZvy40dOGN+qjuErXK/gXufT3r5zfGqQd56sFjbt7z1fFYh3cNoEXiG+ZpArTFYDHDXfJpCo4FoTeKX4qiBXmmwLcPR8iyDRwdUSeMX4DkGuONkS8Cjz3QUZJbijBF45vgzkypPdAx5tvhuQ0YL7P4F3iG8BucNk18CjzncGGTW4VwLvFN/cD5GJP2WbfzdWbtO/gG/3zSWZd9c4e7HQUx9s8SUQKqOjNs6ujNfxfgGAxM6f6FnQSQAAAABJRU5ErkJggg=="/></defs><g fill="none" fill-rule="evenodd"><path d="M273.444 53.32c-7.312-25.4-47.52-42.643-79.567-47.182-32.113-4.54-56.066 3.617-75.48 9.032a523.521 523.521 0 0 1-16.01 4.088c3.253 3.5 5.24 7.624 5.24 9.02 0 2.567-5.78 24.723-11.24 24.723-5.462 0-11.238-22.494-11.238-27.951.005-.588.045-1.175.12-1.759-7.223 1.72-14.866 3.618-23.66 6.076-22.374 6.25-52.122 16.189-59.357 33.56-7.239 17.438 8.028 42.312 21.393 71.002 13.307 28.628 24.739 61.134 47.178 73.834a47.754 47.754 0 0 0 9.95 4.2c.136-.664.26-1.275.366-1.816-2.89-13.804-2.237-38.628-1.276-41.199 0 0 53.654 10.868 57.178 11.56.918-3.061 5.994-16.706 8.647-18.647 2.653-1.94 28.783-10.918 28.783-10.918s-.02-14.174.304-17.383c-37.567-26.007-14.983-48.621-13.7-47.026 1.284 1.594 48.057 41.102 48.19 43.669.12 2.812-5.54 26.337-10.086 40.348 10.661-9.188 21.027-19.636 31.634-31.355 24.326-26.85 49.924-60.41 42.631-85.876zM83.865 146.092c-6.422 0-24.4-25.364-24.4-35.637 0-5.78 3.532-19.265 13.486-19.265 2.89 0 9.312 5.138 10.272 6.421a35.964 35.964 0 0 0 3.143 2.89c-.202 1.023-.778 3.855-1.369 6.811 4.854 5.489 13.96 17.04 13.96 25.618 0 7.386-1.606 13.162-15.092 13.162zm5.446-45.59c-4.497 0-14.78-14.781-14.78-32.748 0-5.445 4.496-10.595 11.24-10.595 15.411 0 16.695 32.105 16.695 34.672.023 3.532-3.509 8.67-13.14 8.67h-.015z" fill="#333"/><path d="M192.803 15.34L115.566.184c-5.341-1.031-10.513 2.444-11.576 7.78L93.636 60.717c8.04 8.429 8.853 29.075 8.853 31.117 0 3.532-3.532 8.67-13.163 8.67-.879 0-1.98-.571-3.181-1.61l-.242 1.23c.308.264.463.388.463.388-.194.984-.778 3.952-1.369 6.81 4.854 5.478 13.96 17.03 13.96 25.607 0 7.39-1.606 13.162-15.092 13.162-1.556 0-3.757-1.466-6.223-3.839L74.53 158.2a9.907 9.907 0 0 0 5.36 10.766c.237.047 53.569 10.849 57.178 11.557.918-3.061 5.994-16.706 8.647-18.647 2.653-1.941 28.784-10.919 28.784-10.919s-.02-14.174.303-17.383c-37.566-26.006-14.983-48.62-13.7-47.026.63.778 12.12 10.623 23.728 20.775l15.749-80.407a9.891 9.891 0 0 0-7.776-11.576z" fill="url(#b)"/><path d="M91.894 13.812c-5.139 0-6.745 8.029-6.745 11.238 0 5.445 5.78 27.935 11.237 27.935s11.241-22.171 11.241-24.723c0-2.551-6.744-14.45-15.733-14.45z" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68.493 150.36l75.036 14.726" stroke="#000" stroke-width="3"/><circle fill="url(#c)" cx="121.229" cy="168.987" r="3.901"/><path d="M85.795 57.178c-6.745 0-11.242 5.135-11.242 10.596 0 17.978 10.277 32.747 14.781 32.747 9.631 0 13.163-5.138 13.163-8.67-.008-2.587-1.292-34.673-16.702-34.673zm-.798 50.134c4.854 5.489 13.96 17.04 13.96 25.618 0 7.39-1.606 13.162-15.092 13.162-6.422 0-24.4-25.364-24.4-35.637 0-5.78 3.532-19.265 13.486-19.265 2.89 0 9.312 5.138 10.272 6.421a35.964 35.964 0 0 0 3.143 2.89c-.202 1.023-.778 3.855-1.369 6.811m-2.734-2.956a64.992 64.992 0 0 1 2.723 2.956m2.112 2.462s-4.859-5.772-7.749-8.34m61.846 151.096l7.064-28.255s43.004-37.57 47.178-44.308c4.173-6.736 13.968-46.073 13.827-49.764-.112-2.567-46.878-42.063-48.161-43.67-1.284-1.606-23.867 21.005 13.699 47.027-.323 3.209-.303 17.383-.303 17.383s-26.131 8.981-28.784 10.918c-2.653 1.937-7.729 15.586-8.647 18.647-3.532-.692-57.178-11.56-57.178-11.56-.96 2.571-1.614 27.395 1.276 41.2-1.945 9.953-9.635 42.397-9.635 42.397m60.061-55.949c.875-3.345 5.118-15.36 6.172-18.227" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+
         </div>
         <div class="card-text">
           <p>Content Creation is similar to running a kitchen, efficiency and coordination is key.</p>
@@ -205,8 +204,13 @@
         </div>
       </div>
     </div>
-    <div class="card-wrapper" id="block-left-2">
-      <div class="card service-4 left">
+    <div class="card-wrapper" id="block-right-2">
+      <div class="card service-4 right"
+      data-aos="fade-up"
+      data-aos-anchor="#block-right-2"
+      data-aos-offset="350"
+      data-aos-duration="350"
+      data-aos-easing="ease-in">
         <h3 class="card-title">Web Design & Development</h3>
         <div class="card-logo small">
           <?xml version="1.0" encoding="UTF-8"?>
@@ -263,7 +267,8 @@
         <div class="stat-card"
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
-            data-aos-delay="250"
+            data-aos-delay="100"
+            data-aos-offset="50"
             data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
@@ -291,6 +296,7 @@
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
             data-aos-delay="100"
+            data-aos-offset="50"
             data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
@@ -331,7 +337,8 @@
         <div class="stat-card"
             data-aos="fade-up"
             data-aos-anchor=".stat-cards"
-            data-aos-delay="250"
+            data-aos-delay="100"
+            data-aos-offset="50"
             data-aos-duration="350"
             data-aos-easing="ease-in">
           <div class="card-icon">
@@ -378,7 +385,8 @@
     <div class="testimonials-slider">
       <div class="testimonial-item">
         <div class="quotes">
-          <svg width="99" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M96.924 48.77c-5.257 18.68-18.223 32.24-30.829 32.24a17.75 17.75 0 0 1-3.009-.26 2.033 2.033 0 0 1-1.349-.9 1.985 1.985 0 0 1-.234-1.6l2.594-9.22a2.023 2.023 0 0 1 2.013-1.45h.206c4.675 0 13.218-6.96 17.573-22.43.173-.61.336-1.24.493-1.89a22.866 22.866 0 0 1-16 1.49C56.53 41.413 49.627 29.1 52.965 17.248 56.302 5.395 68.615-1.507 80.467 1.83c7.858 2.18 13.765 8.66 16.635 18.24 2.587 8.64 2.523 19.11-.178 28.7zM14.136 81a17.732 17.732 0 0 1-3.008-.25 2.033 2.033 0 0 1-1.349-.9 1.993 1.993 0 0 1-.234-1.6l2.6-9.22a2.009 2.009 0 0 1 2.013-1.45h.2c4.674 0 13.219-6.96 17.574-22.43.173-.61.337-1.24.492-1.89a22.864 22.864 0 0 1-16 1.49C4.642 41.356-2.189 29.085 1.134 17.283 4.458 5.48 16.688-1.423 28.51 1.83c7.856 2.18 13.763 8.66 16.634 18.24 2.59 8.64 2.526 19.11-.175 28.7C39.709 67.45 26.742 81 14.136 81z" id="quotes"/></defs><use fill="url(#a)" xlink:href="#quotes" transform="translate(0 -1)" fill-rule="evenodd" opacity=".7"/></svg>
+          <svg width="99" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+  <linearGradient x1="94.988%" y1="100%" x2="0%" y2="0%" id="a"><stop stop-color="#E4AB1F" offset="0%"/><stop stop-color="#FFA944" offset="29.887%"/><stop stop-color="#F97051" offset="73.47%"/><stop stop-color="#D76950" offset="100%"/></linearGradient><path d="M96.924 48.77c-5.257 18.68-18.223 32.24-30.829 32.24a17.75 17.75 0 0 1-3.009-.26 2.033 2.033 0 0 1-1.349-.9 1.985 1.985 0 0 1-.234-1.6l2.594-9.22a2.023 2.023 0 0 1 2.013-1.45h.206c4.675 0 13.218-6.96 17.573-22.43.173-.61.336-1.24.493-1.89a22.866 22.866 0 0 1-16 1.49C56.53 41.413 49.627 29.1 52.965 17.248 56.302 5.395 68.615-1.507 80.467 1.83c7.858 2.18 13.765 8.66 16.635 18.24 2.587 8.64 2.523 19.11-.178 28.7zM14.136 81a17.732 17.732 0 0 1-3.008-.25 2.033 2.033 0 0 1-1.349-.9 1.993 1.993 0 0 1-.234-1.6l2.6-9.22a2.009 2.009 0 0 1 2.013-1.45h.2c4.674 0 13.219-6.96 17.574-22.43.173-.61.337-1.24.492-1.89a22.864 22.864 0 0 1-16 1.49C4.642 41.356-2.189 29.085 1.134 17.283 4.458 5.48 16.688-1.423 28.51 1.83c7.856 2.18 13.763 8.66 16.634 18.24 2.59 8.64 2.526 19.11-.175 28.7C39.709 67.45 26.742 81 14.136 81z" id="quotes"/></defs><use fill="url(#a)" xlink:href="#quotes" transform="translate(0 -1)" fill-rule="evenodd" opacity=".7"/></svg>
 
           <h4 class="caption">TESTIMONIALS</h4>
         </div>
@@ -403,7 +411,7 @@
     <div class="contact-col">
       <h2 class="cta-title">What are you waiting for?</h2>
         <!-- contact form -->
-        <form class="contact-form" action="" method="post">
+        <form class="contact-form" action="" method="post" id="contact-form">
     <div class="c-form">
         <div class="form-row">
           <div class="form-field">
@@ -442,11 +450,11 @@
     <div class="info-col">
       <div class="contact-item">
         <h6>address :</h6>
-        <h3>4701 Rue Saint-Dominique</br>H2T 1T7</br>Montreal, QC </h3>
+        <h3>3253a Rue Saint-Jacques</br>H4C 1G8</br>Montreal, QC </h3>
       </div>
       <div class="contact-item">
         <h6>phone :</h6>
-        <h3>309-736-5477</h3>
+        <h3>514-258-7295</h3>
       </div>
       <div class="contact-item">
         <h6>email :</h6>
