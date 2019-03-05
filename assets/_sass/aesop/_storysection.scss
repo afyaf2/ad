@@ -118,7 +118,6 @@
       opacity: 0;
       top: -75%;
       left: -25%;
-      transform: scale(0.3);
     }
     figcaption {
       position: absolute;
@@ -144,7 +143,7 @@
 #story-btn {
   color: white;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid #D96E56;
   border-radius: 5px;
   font-family: $caption-font;
   text-transform: uppercase;
@@ -156,8 +155,10 @@
   font-weight: bold;
   transition: all 0.3s ease;
   opacity: 0;
+  background: #D96E56;
   &:hover {
-    background: #D96E56;
+    background: white;
+    color: #333;
     border: 2px solid black;
   }
   @include media-query($on-palm) {

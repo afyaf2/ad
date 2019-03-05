@@ -18,16 +18,19 @@
 
 @font-face {
   font-family: "Rubik-Regular";
-  src: url(../fonts/Rubik-Regular.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal
+    src: url('../fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
   font-family: "Rubik-Lt";
-  src: url(../fonts/Rubik-Light.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal
+    src: url('../fonts/rubik-light-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
