@@ -213,3 +213,14 @@ input, textarea:focus {
     transition: all 0.3s linear;
   }
 }
+
+/**
+ * aos fix
+*/
+
+[data-aos] {
+  pointer-events: none;
+  &.aos-animate {
+    pointer-events: auto;
+  }
+}
