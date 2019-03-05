@@ -447,6 +447,7 @@ var slider = tns({
     autoplay: false,
     axis: "vertical",
     navPosition: "bottom",
+    preventScrollOnTouch: "auto",
     controls: false
 });
 
