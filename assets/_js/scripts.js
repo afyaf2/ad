@@ -50,7 +50,7 @@ var handleMediaChange = function(mql) {
         });
 
         document.getElementById("scroll-btn").addEventListener('click', function() {
-          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
+          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut, offsetY: 150 });
         });
 
         /* debounce/reset function for timeline */
@@ -221,7 +221,8 @@ var handleMediaChange = function(mql) {
          */
 
         document.getElementById("story-btn").addEventListener('click', function() {
-          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeIn });;
+          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeIn,
+          offsetY: 150 });;
         });
 
         document.getElementById("scroll-btn").addEventListener('click', function() {
