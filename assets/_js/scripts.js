@@ -438,7 +438,18 @@ if (header) {
 /* initialize AnimateOnScroll */
 
 AOS.init();
-3
+
+/* homepage testimonials slider */
+var slider = tns({
+    container: '.testimonials-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    axis: "vertical",
+    navPosition: "bottom",
+    controls: false
+});
+
 /* team-members pop-in handler */
 
 var teamMembers = Array.from(document.querySelectorAll('.team-member'));
