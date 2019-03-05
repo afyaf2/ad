@@ -522,6 +522,9 @@
   .tns-outer {
     position: relative;
     height: 33rem;
+    @include media-query($on-palm) {
+      height: unset;
+    }
   }
   .tns-nav {
     position: absolute;
@@ -543,7 +546,9 @@
       transform: scale(0.8);
       transition: 0.3s linear all;
       @include media-query($on-palm) {
-        height: 10px;
+        height: 15px;
+        margin: .5px;
+        right: 2.5%;
       }
     }
     .tns-nav-active {
@@ -563,8 +568,11 @@
         margin: 25px 0;
       }
     }
-    .testimonial-author h5 {
-      margin-bottom: 0
+    .testimonial-author {
+      text-align: center;
+      h5 {
+        margin-bottom: 0
+      }
     }
   }
 }
