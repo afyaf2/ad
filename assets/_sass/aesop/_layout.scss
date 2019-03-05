@@ -542,6 +542,9 @@
       opacity: 0.5;
       transform: scale(0.8);
       transition: 0.3s linear all;
+      @include media-query($on-palm) {
+        height: 10px;
+      }
     }
     .tns-nav-active {
       opacity: 1;
