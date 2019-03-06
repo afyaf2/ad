@@ -545,10 +545,12 @@
       opacity: 0.5;
       transform: scale(0.8);
       transition: 0.3s linear all;
-      @include media-query($on-palm) {
+    }
+    @include media-query($on-palm) {
+      right: 2.5%;
+      button {
         height: 15px;
         margin: .5px;
-        right: 2.5%;
       }
     }
     .tns-nav-active {
