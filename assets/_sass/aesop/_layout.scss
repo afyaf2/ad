@@ -347,6 +347,9 @@
 }
 
 @include media-query ($on-palm) {
+  #block-left-1 {
+    margin-top: 50px !important
+  }
   #block-left-1, #block-left-2, #block-right-1, #block-right-2, #block-intro {
     margin-top: 0;
     margin-left: 0;
