@@ -30,7 +30,7 @@ var handleMediaChange = function(mql) {
 
 
         /* define hero text animation timeline */
-
+//
 //         var heroTimeline = new TimelineMax({ paused: true });
 //
 //         heroTimeline.to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
@@ -43,6 +43,10 @@ var handleMediaChange = function(mql) {
 //             }, '0.4')
 //             .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
 //             .call(smoothScroll);
+//
+//         window.onload(function {
+//           heroTimeline.play()
+//         })
         /* hero element animation and smooth-scroll handler */
 
         document.getElementById("story-btn").addEventListener('click', function() {
@@ -50,7 +54,7 @@ var handleMediaChange = function(mql) {
         });
 
         document.getElementById("scroll-btn").addEventListener('click', function() {
-          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut, offsetY: 150 });
+          TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
         });
 
         /* debounce/reset function for timeline */
@@ -221,8 +225,7 @@ var handleMediaChange = function(mql) {
          */
 
         document.getElementById("story-btn").addEventListener('click', function() {
-          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeIn,
-          offsetY: 150 });;
+          TweenMax.to(window, '0.7', { scrollTo: "#contact-form", ease: Power2.easeIn });;
         });
 
         document.getElementById("scroll-btn").addEventListener('click', function() {
@@ -238,30 +241,20 @@ var handleMediaChange = function(mql) {
             }, 4000)
         }
         /* define hero text animation timeline */
-        var heroTimeline = new TimelineMax({ paused: true });
+        window.onload = function() {
+          var heroTimeline = new TimelineMax;
 
-        // heroTimeline.to('#hero-text-1', '0.5', {
-        //         x: 160,
-        //         ease: Power2.easeInOut
-        //     })
-        //     .to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
-        //     .to('#hero-text-2', '0.5', {
-        //         x: 120,
-        //         ease: Power2.easeInOut
-        //     })
-        //     .to('#hero-text-3', '0.5', {
-        //         x: 80,
-        //         ease: Power2.easeInOut
-        //     })
-        //     .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
-        //     .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
-        //         scaleX: 1.2,
-        //         scaleY: 1.2,
-        //         ease: Back.easeOut.config(1.5),
-        //         opacity: 0.6
-        //     }, '0.4')
-        //     .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
-        //     .call(smoothScroll);
+          heroTimeline
+              .set('#title', {opacity: 0})
+              .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
+              .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
+                  scaleX: 1.1,
+                  scaleY: 1.1,
+                  ease: Back.easeOut.config(1.5),
+                  opacity: 0.8
+              }, '0.4')
+              .to('#title', '0.3', { opacity: 1, ease: Power3.easeIn })
+        }
 
         /* scrolled tween section */
 
@@ -401,6 +394,33 @@ var handleMediaChange = function(mql) {
             duration: '100%'
         }).setTween(thirdScroll).addTo(controller);
 
+        //  handle nav opening
+        document.getElementById('nav-trigger').addEventListener('click', function(){
+          let navmenu = document.querySelectorAll('.nav-menu');
+          if (navmenu[0].classList.contains('is-open')){
+            event.currentTarget.classList.remove('active');
+            navmenu[0].classList.remove('is-open')
+          }
+          else {
+            event.currentTarget.classList.add('active')
+            navmenu[0].classList.add('is-open')
+          }
+        })
+
+        // handle smooth scroll
+        let nav_links = document.getElementsByClassName('scroll-trigger');
+
+        // smooth scroll function
+        const scrollTo = (destination) => {
+          TweenMax.to(window, '2', { scrollTo: `#${destination}`, ease: Power2.easeInOut });
+        }
+
+        for (let i = 0; i < nav_links.length; i ++ ) {
+          nav_links[i].addEventListener('click', function() {
+            let destination = this.getAttribute('data-scroll');
+            scrollTo(destination);
+          })
+        }
     }
 }
 mql.addListener(handleMediaChange);
@@ -439,7 +459,7 @@ if (header) {
 
 AOS.init();
 
-/* homepage testimonials slider */
+/* tinyslider for testimonials */
 var slider = tns({
     container: '.testimonials-slider',
     items: 1,
@@ -447,10 +467,8 @@ var slider = tns({
     autoplay: false,
     axis: "vertical",
     navPosition: "bottom",
-    preventScrollOnTouch: "force",
     controls: false
-});
-
+  });
 /* team-members pop-in handler */
 
 var teamMembers = Array.from(document.querySelectorAll('.team-member'));

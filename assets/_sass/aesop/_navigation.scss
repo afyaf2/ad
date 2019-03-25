@@ -1,0 +1,107 @@
+.navbar {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  left: 0;
+  width: 100vw;
+  display: inline-flex;
+  overflow-x: hidden;
+
+  .title-icon {
+    margin-left: 75px;
+    svg {
+      max-height: 100px;
+      width: 125px;
+    }
+  }
+  #nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: $caption-font;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: 27.5%;
+    padding: 5px 25px;
+    background: orange;
+    color: white;
+    z-index: 9;
+    transition: 0.2s linear all;
+    transform: translateX(15px);
+    svg {
+      transform: rotate(45deg) translate(-10px, 10px);
+      fill: white;
+      padding: 3px;
+    }
+    &:hover {
+      transform: translateX(0);
+    }
+  }
+  #nav-trigger.active {
+    transform: translateX(55%);
+    opacity: 0.8;
+    svg {
+      transform: rotate(0deg) translate(-10px);
+    }
+  }
+  @include media-query($on-palm) {
+    margin: 25px;
+    height: unset;
+    .title-icon {
+      svg {
+        height: 50px;
+        width: 90px;
+      }
+    }
+  }
+}
+.site-nav {
+  display:inline-flex;
+  height: 100px;
+  opacity: 1;
+  .nav-menu {
+    position: absolute;
+    right: 35px;
+    top: 0;
+    padding: 40px;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    opacity: 0;
+    transition: 0.3s linear all;
+    a {
+      transition: 0.2s linear all;
+      margin: 0 35px;
+      font-family: $body-font;
+      font-size: 14px;
+      font-weight: 800;
+      color: black;
+      opacity: 0.5;
+      text-transform: uppercase;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .nav-btn {
+      padding: 5px;
+      border-radius: 5px;
+      background: none;
+      color: white;
+      background: #D96E56;
+      opacity: 1;
+      border: 1px solid #D96E56;
+      transition: 0.2s linear all;
+      &:hover {
+        border: 1px solid white;
+        opacity: 0.95;
+      }
+    }
+  }
+  .nav-menu.is-open {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
