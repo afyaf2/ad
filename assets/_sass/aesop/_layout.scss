@@ -1,55 +1,3 @@
-.navbar {
-  z-index: 3;
-  margin: 0 75px;
-  position: absolute;
-  top: 0;
-  height: 100px;
-  left: 0;
-  max-width: 100vw;
-  display: inline-flex;
-
-  .title-icon {
-    svg {
-      max-height: 100px;
-      width: 125px;
-    }
-  }
-
-  &:hover {
-    .site-nav{
-      opacity: 1;
-    }
-  }
-  .site-nav {
-    display:inline-flex;
-    height: 100px;
-    opacity: 0;
-    transition: 0.2s opacity linear;
-    .nav-menu {
-      margin: auto;
-      a {
-        padding-left: 50px;
-        width: 125px;
-        font-family: $body-font;
-        font-size: 14px;
-        font-weight: 800;
-        color: $grey-dark;
-        text-transform: uppercase
-      }
-    }
-  }
-  @include media-query($on-palm) {
-    margin: 25px;
-    height: unset;
-    .title-icon {
-      svg {
-        height: 50px;
-        width: 90px;
-      }
-    }
-  }
-}
-
 .home {
   max-width: 100vw
 }
@@ -66,12 +14,13 @@
   }
   .lead-text {
     font-size: 56px;
-
+    opacity: 0;
+    padding-left: 2.5rem;
     &.tab-1 {
-      padding-left: 2.5rem
+      padding-left: 5rem
     }
     &.tab-2 {
-      padding-left: 5rem;
+      padding-left: 7.5rem;
       margin-bottom: 1rem;
     }
   }
@@ -82,6 +31,7 @@
     color: $grey-dark;
     font-size: 18px;
     line-height: 1.5;
+    opacity: 0;
   }
 
   .scroll-icon {
