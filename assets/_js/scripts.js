@@ -28,25 +28,6 @@ var handleMediaChange = function(mql) {
         /*
          */
 
-
-        /* define hero text animation timeline */
-//
-//         var heroTimeline = new TimelineMax({ paused: true });
-//
-//         heroTimeline.to('#title', '0.1', { opacity: 0, ease: Power0.easeIn })
-//             .to(['#hero-text-2', '#hero-text-3'], '0.5', { opacity: 0, ease: Power3.easeIn })
-//             .staggerTo(['#hero-text-1', '#hero-text-2', '#hero-text-3'], '0.75', {
-//                 scaleX: 1.05,
-//                 scaleY: 1.05,
-//                 ease: Back.easeOut.config(1.5),
-//                 opacity: 0.6
-//             }, '0.4')
-//             .to(['#hero-text-2', '#hero-text-3', '#hero-text-1'], '0.3', { opacity: 0, ease: Power3.easeIn })
-//             .call(smoothScroll);
-//
-//         window.onload(function {
-//           heroTimeline.play()
-//         })
         /* hero element animation and smooth-scroll handler */
 
         document.getElementById("story-btn").addEventListener('click', function() {
@@ -56,16 +37,6 @@ var handleMediaChange = function(mql) {
         document.getElementById("scroll-btn").addEventListener('click', function() {
           TweenMax.to(window, '0.7', { scrollTo: "#scroll-target", ease: Power2.easeInOut });
         });
-
-        /* debounce/reset function for timeline */
-
-        function Reset() {
-            setTimeout(function() {
-                heroTimeline.pause();
-                heroTimeline.progress(0)
-            }, 2000)
-        }
-
 
         /* scroll animations for story section */
 
@@ -394,7 +365,33 @@ var handleMediaChange = function(mql) {
             duration: '100%'
         }).setTween(thirdScroll).addTo(controller);
 
+        //  handle nav opening
+        document.getElementById('nav-trigger').addEventListener('click', function(){
+          let navmenu = document.querySelectorAll('.nav-menu');
+          if (navmenu[0].classList.contains('is-open')){
+            event.currentTarget.classList.remove('active');
+            navmenu[0].classList.remove('is-open')
+          }
+          else {
+            event.currentTarget.classList.add('active')
+            navmenu[0].classList.add('is-open')
+          }
+        })
 
+        // handle smooth scroll
+        let nav_links = document.getElementsByClassName('scroll-trigger');
+
+        // smooth scroll function
+        const scrollTo = (destination) => {
+          TweenMax.to(window, '2', { scrollTo: `#${destination}`, ease: Power2.easeInOut });
+        }
+
+        for (let i = 0; i < nav_links.length; i ++ ) {
+          nav_links[i].addEventListener('click', function() {
+            let destination = this.getAttribute('data-scroll');
+            scrollTo(destination);
+          })
+        }
     }
 }
 mql.addListener(handleMediaChange);
@@ -429,35 +426,8 @@ if (header) {
     });
 }
 
-/*  handle nav opening */
-        document.getElementById('nav-trigger').addEventListener('click', function(){
-          let navmenu = document.querySelectorAll('.nav-menu');
-          if (navmenu[0].classList.contains('is-open')){
-            event.currentTarget.classList.remove('active');
-            navmenu[0].classList.remove('is-open')
-          }
-          else {
-            event.currentTarget.classList.add('active')
-            navmenu[0].classList.add('is-open')
-          }
-        })
-
-        // handle smooth scroll
-        let nav_links = document.getElementsByClassName('scroll-trigger');
-
-        // smooth scroll function
-        const scrollTo = (destination) => {
-          TweenMax.to(window, '2', { scrollTo: `#${destination}`, ease: Power2.easeInOut });
-        }
-
-        for (let i = 0; i < nav_links.length; i ++ ) {
-          nav_links[i].addEventListener('click', function() {
-            let destination = this.getAttribute('data-scroll');
-            scrollTo(destination);
-          })
-        }
-
 /* initialize AnimateOnScroll */
+
 AOS.init();
 
 /* tinyslider for testimonials */
