@@ -394,33 +394,7 @@ var handleMediaChange = function(mql) {
             duration: '100%'
         }).setTween(thirdScroll).addTo(controller);
 
-        //  handle nav opening
-        document.getElementById('nav-trigger').addEventListener('click', function(){
-          let navmenu = document.querySelectorAll('.nav-menu');
-          if (navmenu[0].classList.contains('is-open')){
-            event.currentTarget.classList.remove('active');
-            navmenu[0].classList.remove('is-open')
-          }
-          else {
-            event.currentTarget.classList.add('active')
-            navmenu[0].classList.add('is-open')
-          }
-        })
 
-        // handle smooth scroll
-        let nav_links = document.getElementsByClassName('scroll-trigger');
-
-        // smooth scroll function
-        const scrollTo = (destination) => {
-          TweenMax.to(window, '2', { scrollTo: `#${destination}`, ease: Power2.easeInOut });
-        }
-
-        for (let i = 0; i < nav_links.length; i ++ ) {
-          nav_links[i].addEventListener('click', function() {
-            let destination = this.getAttribute('data-scroll');
-            scrollTo(destination);
-          })
-        }
     }
 }
 mql.addListener(handleMediaChange);
@@ -455,8 +429,35 @@ if (header) {
     });
 }
 
-/* initialize AnimateOnScroll */
+/*  handle nav opening */
+        document.getElementById('nav-trigger').addEventListener('click', function(){
+          let navmenu = document.querySelectorAll('.nav-menu');
+          if (navmenu[0].classList.contains('is-open')){
+            event.currentTarget.classList.remove('active');
+            navmenu[0].classList.remove('is-open')
+          }
+          else {
+            event.currentTarget.classList.add('active')
+            navmenu[0].classList.add('is-open')
+          }
+        })
 
+        // handle smooth scroll
+        let nav_links = document.getElementsByClassName('scroll-trigger');
+
+        // smooth scroll function
+        const scrollTo = (destination) => {
+          TweenMax.to(window, '2', { scrollTo: `#${destination}`, ease: Power2.easeInOut });
+        }
+
+        for (let i = 0; i < nav_links.length; i ++ ) {
+          nav_links[i].addEventListener('click', function() {
+            let destination = this.getAttribute('data-scroll');
+            scrollTo(destination);
+          })
+        }
+
+/* initialize AnimateOnScroll */
 AOS.init();
 
 /* tinyslider for testimonials */
